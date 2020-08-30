@@ -1,0 +1,27 @@
+.navbar-header {
+  color: royalblue;
+}
+
+button {
+    -webkit-appearance: button;
+    text-rendering: auto;
+    color: white;
+    letter-spacing: normal;
+    word-spacing: normal;
+    text-transform: none;
+    text-indent: 0px;
+    text-shadow: none;
+    display: inline-block;
+    text-align: center;
+    align-items: flex-start;
+    cursor: pointer;
+    background-color: black;
+    box-sizing: border-box;
+    margin: 10px 0px;
+    font: 400 20px system-ui;
+    padding: 10px 60px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: white;
+    border-image: initial;
+}

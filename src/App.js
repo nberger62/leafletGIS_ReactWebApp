@@ -1,26 +1,96 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, { Component } from 'react';
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+} from "react-router-dom";
+import Navbar from './navbar';
+import Map from './map';
 import './App.css';
 
-function App() {
+class App extends Component {
+  constructor() {
+    super();
+    this.state = {};
+  }
+
+  componentDidMount() {
+    // get the data from the server
+    // make a get request to `/api/rivers`
+    // that will return the JSON of rivers
+    // console log that JSON data
+  let d = {};
+  fetch('http://localhost:8080/api/rivers')
+    .then(function (response) {
+      return response.json();
+    })
+    .then((data)  => {
+      d = data;
+      console.log('data variable from fetch', data)
+      this.setState({
+        geoData: data,
+      })
+      // console.log(data);
+    });
+    console.log('after fetch')
+    console.log('d variable', d);
+    // set the component's state to the data
+  }
+
+  render() {
+    console.log('component state in render', this.state);
+
+    return (
+      <Router>
+        <div className="App">
+          <Navbar />
+          <Switch>
+            <Route exact path="/">
+              <Home />
+            </Route>
+            <Route path="/services">
+              <Services />
+              <Map geoData={this.state.geoData} />
+            </Route>
+            <Route path="/about">
+              <About />
+            </Route>
+            <Route path="/contact">
+              <Contact />
+            </Route>
+          </Switch>
+        </div>
+      </Router>
+    );
+  }
+}
+
+
+function About() {
+  return <h2>We are a Geospatial Analysis Team</h2>;
+}
+
+function Contact() {
+  return <h2>Contact us for a quote today on GIS services!</h2>;
+}
+
+function Home() {
+  return <h2>Welcome to Nate's Global!</h2>;
+}
+
+function Services() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+    <Switch>
+    <Route exact path="/services/map">
+    <Map />
+    </Route>
+    
+  </Switch>
+    <h2>Check out these GIS services that we provide</h2>
+    </>
   );
 }
+
 
 export default App;

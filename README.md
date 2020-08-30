@@ -1,3 +1,23 @@
+## Features
+
+- [x] Make a simple map
+- [ ] make a map 3d
+- [x] make the home button go to the home route
+- [ ] make the 3D map button and go to the route
+- [ ] be able to add data layers to map
+        polygons, polylines, imagery, points, etc...
+- [x] make the about us route
+- [x] make the contact us route
+- [ ] make the login route and page
+- [ ] make the logout route and page
+- [ ] set up user authentication and middleware for being logged in
+- [ ] set up back end with flask
+- [ ] connet to a postgresse SQL database
+- [ ] create additional map featurs such as chaging the basemaps, adding data, search toolbar, etc...
+
+
+
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
