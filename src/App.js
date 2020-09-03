@@ -6,6 +6,8 @@ import {
 } from "react-router-dom";
 import Navbar from './navbar';
 import Map from './map';
+import Three from './three';
+import Form from './form';
 import './App.css';
 
 class App extends Component {
@@ -48,6 +50,9 @@ class App extends Component {
             <Route exact path="/">
               <Home />
             </Route>
+            <Route path="/services/3d">
+              <Three />
+            </Route>
             <Route path="/services">
               <Services />
               <Map geoData={this.state.geoData} />
@@ -57,6 +62,7 @@ class App extends Component {
             </Route>
             <Route path="/contact">
               <Contact />
+              <Form />
             </Route>
           </Switch>
         </div>
@@ -71,7 +77,7 @@ function About() {
 }
 
 function Contact() {
-  return <h2>Contact us for a quote today on GIS services!</h2>;
+  return <h2>Get a quote Today!</h2>;
 }
 
 function Home() {
@@ -81,13 +87,15 @@ function Home() {
 function Services() {
   return (
     <>
-    <Switch>
-    <Route exact path="/services/map">
-    <Map />
-    </Route>
-    
-  </Switch>
-    <h2>Check out these GIS services that we provide</h2>
+      <Switch>
+        <Route exact path="/services/3d">
+          <Three />
+        </Route>
+        <Route exact path="/services/map">
+          <Map />
+        </Route>
+      </Switch>
+      <h2>Check out these GIS services that we provide</h2>
     </>
   );
 }

@@ -11,7 +11,7 @@
 - [ ] make the login route and page
 - [ ] make the logout route and page
 - [ ] set up user authentication and middleware for being logged in
-- [ ] set up back end with flask
+- [ ] set up back end with express
 - [ ] connet to a postgresse SQL database
 - [ ] create additional map featurs such as chaging the basemaps, adding data, search toolbar, etc...
 
