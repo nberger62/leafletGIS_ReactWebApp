@@ -11,10 +11,20 @@ app.get('/ping', function (req, res) {
 });
 
 app.get('/api/rivers', function (req, res) {
-    // This normally would come from a database
-    const data = require('./rivers.json');
-    return res.send(JSON.stringify(data));
-})
+  // This normally would come from a database
+  const data = require('./rivers.json');
+  return res.send(JSON.stringify(data));
+});
+
+app.post('/api/contact', function (req, res) {
+  console.log('TODO');
+  res.send(JSON.stringify({
+    contact: {
+      name: "TODO"
+      // whatever else we want this payload to be
+    }
+  }));
+});
 
 app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, '..', 'build', 'index.html'));
