@@ -7,8 +7,8 @@ import {
 import Navbar from './navbar';
 import Map from './map';
 import Three from './three';
-import Form from './form';
 import './App.css';
+import ContactForm from './ContactForm';
 
 class App extends Component {
   constructor() {
@@ -61,8 +61,7 @@ class App extends Component {
               <About />
             </Route>
             <Route path="/contact">
-              <Contact />
-              <Form />
+              <ContactForm />
             </Route>
           </Switch>
         </div>
@@ -74,10 +73,6 @@ class App extends Component {
 
 function About() {
   return <h2>We are a Geospatial Analysis Team</h2>;
-}
-
-function Contact() {
-  return <h2>Get a quote Today!</h2>;
 }
 
 function Home() {
@@ -95,7 +90,6 @@ function Services() {
           <Map />
         </Route>
       </Switch>
-      <h2>Check out these GIS services that we provide</h2>
     </>
   );
 }
