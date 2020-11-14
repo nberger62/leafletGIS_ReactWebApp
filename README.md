@@ -4,7 +4,7 @@
 - [x] make a map 3d
 - [x] make the home button go to the home route
 - [x] make the 3D map button and go to the route
-- [ ] be able to add data layers to map
+- [X] be able to add data layers to map
         polygons, polylines, imagery, points, etc...
 - [x] make the about us route
 - [x] make the contact us route
@@ -14,7 +14,7 @@
 - [x] set up back end with express
 - [ ] connet to a postgresse SQL database
 - [ ] create additional map featurs such as chaging the basemaps, adding data, search toolbar, etc...
-
+- [ ] create custom widgets for web gis mapping
 
 
 

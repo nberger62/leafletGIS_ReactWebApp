@@ -26,6 +26,9 @@ export default function Navbar() {
           <Link to="/services/3d">
             <button>3D Web GIS</button>
           </Link>
+          <Link to="/portfolio">
+            <button>UWF Portfolio</button>
+          </Link>
         </ul>
       </nav>
 
@@ -46,6 +49,9 @@ export default function Navbar() {
         </Route>
         <Route path="/contact">
           <Contact />
+        </Route>
+        <Route path="/portfolio">
+          <Portfolio />
         </Route>
       </Switch>
     </div>
@@ -70,5 +76,9 @@ function Services() {
 
 function Three() {
   return <h2>We build 3D Web GIS Applications</h2>;
+}
+
+function Portfolio() {
+  return <h2>This is my Portfolio of projects while conducting my Masters in GIS program at the Unniversity of West Florida</h2>;
 }
 

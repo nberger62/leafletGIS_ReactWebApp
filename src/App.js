@@ -10,6 +10,7 @@ import Three from './three';
 import {WebMapView} from './webMapView';
 import './App.css';
 import SceneView from './sceneView';
+import Project from "./project";
 import ContactForm from './ContactForm';
 
 class App extends Component {
@@ -67,6 +68,10 @@ class App extends Component {
             <Route path="/contact">
               <ContactForm />
             </Route>
+            <Route path="/portfolio">
+              <h1>Predictive analysis of active COVID-19 cases in the state of Georgia</h1>
+              <Project />
+            </Route>
           </Switch>
         </div>
       </Router>
@@ -96,6 +101,18 @@ function Services() {
         </Route>
       </Switch>
     </>
+  );
+}
+
+function Portfolio() {
+  return (
+      <>
+        <Switch>
+          <Route exact path="/portfolio">
+            <Project />
+          </Route>
+        </Switch>
+      </>
   );
 }
 
