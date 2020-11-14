@@ -7,7 +7,9 @@ import {
 import Navbar from './navbar';
 import Map from './map';
 import Three from './three';
+import {WebMapView} from './webMapView';
 import './App.css';
+import SceneView from './sceneView';
 import ContactForm from './ContactForm';
 
 class App extends Component {
@@ -52,10 +54,12 @@ class App extends Component {
             </Route>
             <Route path="/services/3d">
               <Three />
+              <SceneView />
             </Route>
             <Route path="/services">
               <Services />
               <Map geoData={this.state.geoData} />
+              <WebMapView />
             </Route>
             <Route path="/about">
               <About />
@@ -85,6 +89,7 @@ function Services() {
       <Switch>
         <Route exact path="/services/3d">
           <Three />
+          <SceneView />
         </Route>
         <Route exact path="/services/map">
           <Map />
